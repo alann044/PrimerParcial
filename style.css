@@ -1,0 +1,226 @@
+*{
+    box-sizing: border-box;
+}
+
+/*INDEX*/
+
+.titulo {
+    text-align: center;
+    margin: 50px 0;
+    color: #333;
+}
+
+.titulo h1 {
+    font-size: 32px;
+    font-family: "Lexend", sans-serif;
+}
+
+.cuadros {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 20px;
+    font-family: "SUSE", sans-serif;
+}
+
+.cuadro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-radius: 12px;
+    width: 220px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    color: inherit;
+}
+
+.cuadro img {
+    width: 150px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.cuadro h2 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.cuadro:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.cuadro:hover img {
+    transform: scale(1.05);
+}
+
+.cuadro-empleado {
+    border-top: 5px solid #fbff1a;
+}
+
+.cuadro-visitante {
+    border-top: 5px solid #ab00ee;
+}
+
+.cuadro-invitado {
+    border-top: 5px solid #fbff1a;
+}
+
+/*FORMULARIOS*/
+.contenido {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mitades {
+    width: 80%;
+    max-width: 1000px;
+    display: flex;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    background: #fff;
+}
+
+.mitad1 {
+    width: 50%;
+    background: linear-gradient(135deg, #bbc74e, #eaee0a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.mitad1 .imagen-lateral {
+    width: 80%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.mitad2 {
+    width: 50%;
+    padding: 40px;
+    text-align: left;
+}
+
+.mitad2 h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 28px;
+    text-align: center;
+    font-family: "Lexend", sans-serif;
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+    font-family: "SUSE", sans-serif;
+}
+
+.formulario label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #444;
+}
+
+.formulario input,
+.formulario select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.3s;
+    font-family: "SUSE", sans-serif;
+}
+
+.formulario input:focus,
+.formulario select:focus {
+    border: 1px solid #2575fc;
+}
+
+button {
+    margin-top: 20px;
+    padding: 14px;
+    background: linear-gradient(135deg, #4b1486, #930cc9);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+    font-family: "SUSE", sans-serif;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #d161fd, #6a11cb);
+}
+
+/*RESULTADO*/
+.resultado {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.resultado .card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    padding: 30px;
+    width: 400px;
+    text-align: center;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.resultado .card h2 {
+    color: #8e009b;
+    margin-bottom: 15px;
+}
+.resultado .card h2.error {
+    color: red;
+}
+
+.resultado .card p {
+    margin: 8px 0;
+    color: #444;
+}
+
+.resultado .success {
+    font-size: 48px;
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.resultado a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #4b1486, #930cc9);
+    color: #fff !important;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.resultado a:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #d161fd, #6a11cb);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
